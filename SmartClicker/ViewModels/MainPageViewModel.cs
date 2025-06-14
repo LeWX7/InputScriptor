@@ -12,6 +12,7 @@ using Microsoft.UI.Xaml.Documents;
 using CommunityToolkit.Maui.Core.Extensions;
 using CommunityToolkit.Mvvm.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Collections.Immutable;
 
 namespace SmartClicker.ViewModels
 {
@@ -95,7 +96,7 @@ namespace SmartClicker.ViewModels
             RecordCommand = new Command(async () => await RecordAsync());
             SavePresetCommand = new Command(async () => await OnSavePresetClicked(null, null));
             LoadPresetCommand = new Command(async () => await OnLoadPresetClicked(null, null));
-            
+
             LoadPresetList();
 
             DynamicData.StartUpdateCursorCommand.Execute(null);
@@ -244,10 +245,29 @@ namespace SmartClicker.ViewModels
                                 else
                                 { MouseService.MoveCursor(block.TargetX, block.TargetY); }
 
-                                if (block.IsRightClick == true)
-                                { MouseService.Click(block.IsRightClick); }
-                                else
-                                { MouseService.Clamp(block.IsClamping); }
+                                //if (block.IsRightClick == true)
+                                //{ MouseService.Click(block.IsRightClick); }
+                                //else
+                                //{ MouseService.Clamp(block.IsClamping); }
+
+                                switch (block.MouseButton)
+                                {
+                                    default:
+                                        MouseService.LeftClick();
+                                        break;
+
+                                    case "Л_КМ":
+                                    MouseService.LeftClick();
+                                        break;
+
+                                    case "П_КМ":
+                                    MouseService.RightClick();
+                                        break;
+
+                                    case "С_КМ":
+                                    MouseService.MiddleClick();
+                                        break;
+                                }
 
                                 // Возвращение курсора на прошлую позицию
                                 if (Settings.BackMove)

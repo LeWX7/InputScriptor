@@ -13,12 +13,12 @@ namespace SmartClicker.ViewModels
             _clickBlock = block;
         }
 
-        public bool IsRightClick
+        public string MouseButton
         {
-            get => _clickBlock.IsRightClick;
+            get => _clickBlock.MouseButton;
             set
             {
-                _clickBlock.IsRightClick = value;
+                _clickBlock.MouseButton = value;
                 OnPropertyChanged();
             }
         }

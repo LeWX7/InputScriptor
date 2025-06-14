@@ -67,13 +67,13 @@
                         <DataTemplate>
                             <StackLayout>
                                 <HorizontalStackLayout Spacing="10" Padding="5">
-                                    <controls:CustomSwitchV2 IsToggled="{Binding IsRightClick}"
+                                    <!--<controls:CustomSwitchV2 IsToggled="{Binding IsRightClick}"
                                                 OnText="ПКМ"
                                                 OffText="ЛКМ"
                                                 OnBackgroundColor="#1B1B1B"
                                                 OffBackgroundColor="#1B1B1B"
                                                 OnTextColor="#FFD2B6"
-                                                OffTextColor="#D2FFDE"/>
+                                                OffTextColor="#D2FFDE"/>-->
 
                                     <controls:CustomSwitchV2 IsToggled="{Binding IsClamping}"
                                                 OnText="Зажать"
@@ -82,6 +82,19 @@
                                                 OffBackgroundColor="#1B1B1B"
                                                 OnTextColor="#FFD2B6"
                                                 OffTextColor="#D2FFDE"/>
+
+                                    <VerticalStackLayout>
+                                        <Picker x:Name="MouseButtonPicker" TextColor="WhiteSmoke"
+                                            SelectedItem="{Binding MouseButton, Mode=TwoWay}">
+                                            <Picker.ItemsSource>
+                                                <x:Array Type="{x:Type x:String}">
+                                                    <x:String>Л_КМ</x:String>
+                                                    <x:String>П_КМ</x:String>
+                                                    <x:String>С_КМ</x:String>
+                                                </x:Array>
+                                            </Picker.ItemsSource>
+                                        </Picker>
+                                    </VerticalStackLayout>
 
                                     <VerticalStackLayout>
                                         <controls:CustomEntry Placeholder="Целевая X" Text="{Binding TargetX}" />

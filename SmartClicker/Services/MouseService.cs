@@ -18,8 +18,12 @@ namespace SmartClicker.Services
 
         public const uint MOUSEEVENTF_LEFTDOWN = 0x02;
         public const uint MOUSEEVENTF_LEFTUP = 0x04;
+
         public const uint MOUSEEVENTF_RIGHTDOWN = 0x08;
         public const uint MOUSEEVENTF_RIGHTUP = 0x10;
+
+        public const uint MOUSEEVENTF_MIDDLEDOWN = 0x20;
+        public const uint MOUSEEVENTF_MIDDLEUP = 0x40;
 
         public struct POINT
         {
@@ -32,16 +36,17 @@ namespace SmartClicker.Services
             SetCursorPos(x, y);
         }
 
-        public static void Click(bool isRightClick)
+        public static void LeftClick()
         {
-            if (isRightClick)
-            {
-                mouse_event(MOUSEEVENTF_RIGHTDOWN | MOUSEEVENTF_RIGHTUP, 0, 0, 0, 0);
-            }
-            else
-            {
-                mouse_event(MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
-            }
+            mouse_event(MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+        }
+        public static void RightClick()
+        {
+            mouse_event(MOUSEEVENTF_RIGHTDOWN | MOUSEEVENTF_RIGHTUP, 0, 0, 0, 0);
+        }
+        public static void MiddleClick()
+        {
+            mouse_event(MOUSEEVENTF_MIDDLEDOWN | MOUSEEVENTF_MIDDLEUP, 0, 0, 0, 0);
         }
 
         public static void Clamp(bool isClamping)

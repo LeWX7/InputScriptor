@@ -5,7 +5,7 @@ namespace SmartClicker.Models
 {
     public class ClickBlock : INotifyPropertyChanged
     {
-        private bool _isRightClick;
+        private string _mouseButton = "Л_КМ";
         private bool _isClamping;
         private int _targetX;
         private int _targetY;
@@ -14,10 +14,10 @@ namespace SmartClicker.Models
         private int _randomOfDelay;
         private string _note;
 
-        public bool IsRightClick
+        public string MouseButton
         {
-            get => _isRightClick;
-            set { _isRightClick = value; OnPropertyChanged(); }
+            get => _mouseButton;
+            set { _mouseButton = value; OnPropertyChanged(); }
         }
         
         public bool IsClamping
