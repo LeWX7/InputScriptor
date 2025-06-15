@@ -101,7 +101,7 @@ namespace SmartClicker.ViewModels
 
             DynamicData.StartUpdateCursorCommand.Execute(null);
 
-            Settings.SelectedUnit = "Миллисекунды";
+            Settings.SelectedUnit = "Секунды";
         }
 
         private void OnGlobalKeyDown(object sender, int vkCode)
@@ -250,23 +250,45 @@ namespace SmartClicker.ViewModels
                                 //else
                                 //{ MouseService.Clamp(block.IsClamping); }
 
-                                switch (block.MouseButton)
+                                if (block.ClickType == "Нажать")
                                 {
-                                    default:
-                                        MouseService.LeftClick();
-                                        break;
+                                    switch (block.MouseButton)
+                                    {
+                                        default:
+                                            MouseService.LeftClick();
+                                            break;
 
-                                    case "Л_КМ":
-                                    MouseService.LeftClick();
-                                        break;
+                                        case "Л_КМ":
+                                            MouseService.LeftClick();
+                                            break;
 
-                                    case "П_КМ":
-                                    MouseService.RightClick();
-                                        break;
+                                        case "П_КМ":
+                                            MouseService.RightClick();
+                                            break;
 
-                                    case "С_КМ":
-                                    MouseService.MiddleClick();
-                                        break;
+                                        case "С_КМ":
+                                            MouseService.MiddleClick();
+                                            break;
+                                    }
+                                }
+                                else if (block.ClickType == "Зажать")
+                                {
+                                    switch (block.MouseButton)
+                                    {
+                                        default:
+                                            MouseService.LeftClamp();
+                                            break;
+
+                                        case "Л_КМ":
+                                            MouseService.LeftClamp();
+                                            break;
+                                        case "П_КМ":
+                                            MouseService.RightClamp();
+                                            break;
+                                        case "С_КМ":
+                                            MouseService.MiddleClamp();
+                                            break;
+                                    }
                                 }
 
                                 // Возвращение курсора на прошлую позицию

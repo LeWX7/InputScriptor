@@ -49,16 +49,17 @@ namespace SmartClicker.Services
             mouse_event(MOUSEEVENTF_MIDDLEDOWN | MOUSEEVENTF_MIDDLEUP, 0, 0, 0, 0);
         }
 
-        public static void Clamp(bool isClamping)
+        public static void LeftClamp()
         {
-            if (isClamping)
-            {
-                mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
-            }
-            else
-            {
-                mouse_event(MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
-            }
+            mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
+        }
+        public static void RightClamp()
+        {
+            mouse_event(MOUSEEVENTF_RIGHTDOWN, 0, 0, 0, 0);
+        }
+        public static void MiddleClamp()
+        {
+            mouse_event(MOUSEEVENTF_MIDDLEDOWN, 0, 0, 0, 0);
         }
     }
 }

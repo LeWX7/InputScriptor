@@ -75,15 +75,15 @@
                                                 OnTextColor="#FFD2B6"
                                                 OffTextColor="#D2FFDE"/>-->
 
-                                    <controls:CustomSwitchV2 IsToggled="{Binding IsClamping}"
+                                    <!--<controls:CustomSwitchV2 IsToggled="{Binding IsClamping}"
                                                 OnText="Зажать"
                                                 OffText="Нажать"
                                                 OnBackgroundColor="#1B1B1B"
                                                 OffBackgroundColor="#1B1B1B"
                                                 OnTextColor="#FFD2B6"
-                                                OffTextColor="#D2FFDE"/>
+                                                OffTextColor="#D2FFDE"/>-->
 
-                                    <VerticalStackLayout>
+                                    <VerticalStackLayout Spacing="5">
                                         <Picker x:Name="MouseButtonPicker" TextColor="WhiteSmoke"
                                             SelectedItem="{Binding MouseButton, Mode=TwoWay}">
                                             <Picker.ItemsSource>
@@ -94,22 +94,33 @@
                                                 </x:Array>
                                             </Picker.ItemsSource>
                                         </Picker>
+
+                                        <Picker x:Name="ClickTypePicker" TextColor="WhiteSmoke"
+                                            SelectedItem="{Binding ClickType, Mode=TwoWay}">
+                                            <Picker.ItemsSource>
+                                                <x:Array Type="{x:Type x:String}">
+                                                    <x:String>Нажать</x:String>
+                                                    <x:String>Зажать</x:String>
+                                                    <x:String>Переместить</x:String>
+                                                </x:Array>
+                                            </Picker.ItemsSource>
+                                        </Picker>
                                     </VerticalStackLayout>
 
-                                    <VerticalStackLayout>
+                                    <VerticalStackLayout Spacing="5">
                                         <controls:CustomEntry Placeholder="Целевая X" Text="{Binding TargetX}" />
                                         <controls:CustomEntry Placeholder="Целевая Y" Text="{Binding TargetY}" />
                                     </VerticalStackLayout>
 
-                                    <VerticalStackLayout>
+                                    <VerticalStackLayout Spacing="5">
                                         <controls:CustomEntry Placeholder="Задержка" Text="{Binding ClickInterval}" />
-                                        <controls:CustomEntry Placeholder="Кол-во нажатий" Text="{Binding StepScore}" />
+                                        <controls:CustomEntry Placeholder="Разброс &#x0a; задержки" Text="{Binding RandomOfDelay}"/>
                                     </VerticalStackLayout>
 
-                                    <controls:CustomEntry Placeholder="Разброс &#x0a; задержки" Text="{Binding RandomOfDelay}"/>
+                                    <controls:CustomEntry Placeholder="Кол-во нажатий" Text="{Binding StepScore}" />
                                 </HorizontalStackLayout>
-                                <VerticalStackLayout Margin="6,0,0,10" HorizontalOptions="Start">
-                                    <controls:CustomEntry MaximumWidthRequest="377" Placeholder="Заметка"
+                                <VerticalStackLayout Margin="5,0,0,10" HorizontalOptions="Start">
+                                    <controls:CustomEntry MaximumWidthRequest="435" Placeholder="Заметка"
                                                           Text="{Binding Note}"/>
                                 </VerticalStackLayout>
                             </StackLayout>

@@ -23,12 +23,12 @@ namespace SmartClicker.ViewModels
             }
         }
         
-        public bool IsClamping
+        public string ClickType
         {
-            get => _clickBlock.IsClamping;
+            get => _clickBlock.ClickType;
             set
             {
-                _clickBlock.IsClamping = value;
+                _clickBlock.ClickType = value;
                 OnPropertyChanged();
             }
         }

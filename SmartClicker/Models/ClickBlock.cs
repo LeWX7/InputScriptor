@@ -6,7 +6,7 @@ namespace SmartClicker.Models
     public class ClickBlock : INotifyPropertyChanged
     {
         private string _mouseButton = "Л_КМ";
-        private bool _isClamping;
+        private string _clickType = "Нажать";
         private int _targetX;
         private int _targetY;
         private int _clickInterval;
@@ -20,10 +20,10 @@ namespace SmartClicker.Models
             set { _mouseButton = value; OnPropertyChanged(); }
         }
         
-        public bool IsClamping
+        public string ClickType
         {
-            get => _isClamping;
-            set { _isClamping = value; OnPropertyChanged(); }
+            get => _clickType;
+            set { _clickType = value; OnPropertyChanged(); }
         }
 
         public int TargetX
