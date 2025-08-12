@@ -75,6 +75,22 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Resources\Localization\Strings.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Strings.resx</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Update="Resources\Localization\Strings.resx">
+	    <CustomToolNamespace>SmartClicker.Resources.Localization</CustomToolNamespace>
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	</ItemGroup>
+
+	<ItemGroup>
 		<MauiXaml Update="Controls\CustomSwitchV2.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>

@@ -1,12 +1,13 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using SmartClicker.Resources.Localization;
 
 namespace SmartClicker.Models
 {
     public class ClickBlock : INotifyPropertyChanged
     {
         private string _mouseButton = "Л_КМ";
-        private string _clickType = "Нажать";
+        private string _clickType = Strings.Click;
         private int _targetX;
         private int _targetY;
         private int _clickInterval;
@@ -19,7 +20,14 @@ namespace SmartClicker.Models
             get => _mouseButton;
             set { _mouseButton = value; OnPropertyChanged(); }
         }
-        
+
+        public IList<string> ClickTypeOptions { get; } =
+        new List<string>
+        {
+            Strings.Click,
+            Strings.Press,
+            Strings.Move
+        };
         public string ClickType
         {
             get => _clickType;

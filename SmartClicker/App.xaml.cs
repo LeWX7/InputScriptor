@@ -3,6 +3,7 @@ using SmartClicker.Models;
 using SmartClicker.ViewModels;
 using SmartClicker.Views;
 using Microsoft.Extensions.DependencyInjection;
+using System.Globalization;
 
 namespace SmartClicker
 {
@@ -11,6 +12,10 @@ namespace SmartClicker
         public App()
         {
             InitializeComponent();
+
+            var lang = Preferences.Get("AppLanguage", "en");
+            CultureInfo.DefaultThreadCurrentCulture = new CultureInfo(lang);
+            CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo(lang);
 
             MainPage = new MainPage();
         }

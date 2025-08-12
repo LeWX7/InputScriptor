@@ -4,7 +4,8 @@
              xmlns:controls="clr-namespace:SmartClicker.Controls"
              xmlns:converters="clr-namespace:SmartClicker.Converters"
              x:Class="SmartClicker.Views.MainPage"
-             BackgroundColor="#1F1F1F">
+             BackgroundColor="#1F1F1F"
+             xmlns:res="clr-namespace:SmartClicker.Resources.Localization">
 
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -67,22 +68,6 @@
                         <DataTemplate>
                             <StackLayout>
                                 <HorizontalStackLayout Spacing="10" Padding="5">
-                                    <!--<controls:CustomSwitchV2 IsToggled="{Binding IsRightClick}"
-                                                OnText="ПКМ"
-                                                OffText="ЛКМ"
-                                                OnBackgroundColor="#1B1B1B"
-                                                OffBackgroundColor="#1B1B1B"
-                                                OnTextColor="#FFD2B6"
-                                                OffTextColor="#D2FFDE"/>-->
-
-                                    <!--<controls:CustomSwitchV2 IsToggled="{Binding IsClamping}"
-                                                OnText="Зажать"
-                                                OffText="Нажать"
-                                                OnBackgroundColor="#1B1B1B"
-                                                OffBackgroundColor="#1B1B1B"
-                                                OnTextColor="#FFD2B6"
-                                                OffTextColor="#D2FFDE"/>-->
-
                                     <VerticalStackLayout Spacing="5">
                                         <Picker x:Name="MouseButtonPicker" TextColor="WhiteSmoke"
                                             SelectedItem="{Binding MouseButton, Mode=TwoWay}">
@@ -95,7 +80,7 @@
                                             </Picker.ItemsSource>
                                         </Picker>
 
-                                        <Picker x:Name="ClickTypePicker" TextColor="WhiteSmoke"
+                                        <!--<Picker x:Name="ClickTypePicker" TextColor="WhiteSmoke"
                                             SelectedItem="{Binding ClickType, Mode=TwoWay}">
                                             <Picker.ItemsSource>
                                                 <x:Array Type="{x:Type x:String}">
@@ -104,7 +89,11 @@
                                                     <x:String>Переместить</x:String>
                                                 </x:Array>
                                             </Picker.ItemsSource>
-                                        </Picker>
+                                        </Picker>-->
+
+                                        <Picker x:Name="ClickTypePicker" TextColor="WhiteSmoke"
+                                                SelectedItem="{Binding ClickType, Mode=TwoWay}"
+                                                ItemsSource="{Binding ClickTypeOptions}"/>
                                     </VerticalStackLayout>
 
                                     <VerticalStackLayout Spacing="5">
@@ -183,7 +172,7 @@
                         OffTextColor="#1F1F1F"/>
 
                 <controls:CustomButton Text="Завершить❌&#x0a;    (Ctrl+R)" Command="{Binding EndCommand}"/>
-                <controls:CustomButton Text="Запустить🔥&#x0a;   (Ctrl+E)" Command="{Binding StartCommand}" />
+                <controls:CustomButton Text="{x:Static res:Strings.Start}" Command="{Binding StartCommand}" />
             </HorizontalStackLayout>
         </StackLayout>
     </Grid>

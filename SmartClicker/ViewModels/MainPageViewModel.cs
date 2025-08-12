@@ -13,6 +13,7 @@ using CommunityToolkit.Maui.Core.Extensions;
 using CommunityToolkit.Mvvm.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Collections.Immutable;
+using SmartClicker.Resources.Localization;
 
 namespace SmartClicker.ViewModels
 {
@@ -152,20 +153,8 @@ namespace SmartClicker.ViewModels
 
         private async Task ReAddBlocksAsync()
         {
-            int.TryParse(Input.BlockDelayEntry, out int blockDelay); int.TryParse(Input.BlockQuantityEntry, out int blockQuantity);
-
-            if (int.TryParse(Input.BlockCountEntry, out int blockCount))
-            {
-                ClickBlocks.Clear();
-                for (int i = 0; i < blockCount; i++)
-                {
-                    ClickBlocks.Add(new ClickBlock
-                    {
-                        ClickInterval = blockDelay,
-                        StepScore = blockQuantity
-                    });
-                }
-            }
+            ClickBlocks.Clear();
+            AddBlocksAsync();
         }
 
         private async Task StartAsync()
@@ -250,7 +239,7 @@ namespace SmartClicker.ViewModels
                                 //else
                                 //{ MouseService.Clamp(block.IsClamping); }
 
-                                if (block.ClickType == "Нажать")
+                                if (block.ClickType == Strings.Click)
                                 {
                                     switch (block.MouseButton)
                                     {
@@ -271,7 +260,7 @@ namespace SmartClicker.ViewModels
                                             break;
                                     }
                                 }
-                                else if (block.ClickType == "Зажать")
+                                else if (block.ClickType == Strings.Press)
                                 {
                                     switch (block.MouseButton)
                                     {
@@ -296,7 +285,7 @@ namespace SmartClicker.ViewModels
                                 { MouseService.MoveCursor(pastCoordinateX, pastCoordinateY); }
 
                                 DynamicData.StepScoreLabel = $"Кликов сделано: {i + 1} / {block.StepScore}";
-                                DynamicData.LapScore = $"Круг N: {u + 1} / {lapScore}";
+                                DynamicData.LapScore = $"{Strings.LapScore} N: {u + 1} / {lapScore}";
 
                                 // Добавление к интервалу случайную задержку в пользовательском диапазоне
                                 int interval = block.ClickInterval;

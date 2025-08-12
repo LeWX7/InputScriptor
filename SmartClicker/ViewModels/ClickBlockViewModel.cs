@@ -22,7 +22,7 @@ namespace SmartClicker.ViewModels
                 OnPropertyChanged();
             }
         }
-        
+
         public string ClickType
         {
             get => _clickBlock.ClickType;
