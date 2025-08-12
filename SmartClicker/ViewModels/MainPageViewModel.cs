@@ -77,8 +77,36 @@ namespace SmartClicker.ViewModels
 
         Random random = new Random();
 
+        public ObservableCollection<LanguageItem> Languages { get; } =
+        [
+            new LanguageItem { DisplayName = "(RU) Русский", Code = "ru" },
+            new LanguageItem { DisplayName = "(EN) English", Code = "en" },
+            new LanguageItem { DisplayName = "(DE) Deutsch", Code = "de" }
+        ];
+
+        private LanguageItem _selectedLanguage;
+        public LanguageItem SelectedLanguage
+        {
+            get => _selectedLanguage;
+            set
+            {
+                if (SetProperty(ref _selectedLanguage, value))
+                {
+                    if (value != null)
+                    {
+                        Preferences.Set("AppLanguage", value.Code);
+                        // сообщаем пользователю, что требуется перезапуск
+                        // например: ShowRestartRequired = true;
+                    }
+                }
+            }
+        }
+
         public MainPageViewModel()
         {
+            var saved = Preferences.Get("AppLanguage", "en");
+            SelectedLanguage = Languages.FirstOrDefault(l => l.Code == saved);
+
             _keyboardHookService = new KeyboardHookService();
             _keyboardHookService.KeyDown += OnGlobalKeyDown;
 

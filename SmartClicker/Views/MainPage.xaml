@@ -59,6 +59,13 @@
             </VerticalStackLayout>
         </HorizontalStackLayout>
 
+        <StackLayout HorizontalOptions="End" VerticalOptions="Start">
+            <Picker ItemsSource="{Binding Languages}"
+                    SelectedItem="{Binding SelectedLanguage}"
+                    ItemDisplayBinding="{Binding DisplayName}"/>
+        </StackLayout>
+
+
         <!-- Основное содержимое с блоками кликов -->
         <ScrollView Grid.Row="1">
             <VerticalStackLayout x:Name="EntriesStackLayout" Padding="15,0" Spacing="15">

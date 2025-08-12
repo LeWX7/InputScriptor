@@ -4,6 +4,7 @@ using SmartClicker.ViewModels;
 using SmartClicker.Views;
 using Microsoft.Extensions.DependencyInjection;
 using System.Globalization;
+using Microsoft.Maui.Storage;
 
 namespace SmartClicker
 {
@@ -14,8 +15,12 @@ namespace SmartClicker
             InitializeComponent();
 
             var lang = Preferences.Get("AppLanguage", "en");
-            CultureInfo.DefaultThreadCurrentCulture = new CultureInfo(lang);
-            CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo(lang);
+            var culture = new CultureInfo(lang);
+
+            CultureInfo.DefaultThreadCurrentCulture = culture;
+            CultureInfo.DefaultThreadCurrentUICulture = culture;
+
+            SmartClicker.Resources.Localization.Strings.Culture = culture;
 
             MainPage = new MainPage();
         }
