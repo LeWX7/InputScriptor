@@ -61,6 +61,42 @@ namespace SmartClicker.Resources.Localization {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Add🧩.
+        /// </summary>
+        internal static string Add {
+            get {
+                return ResourceManager.GetString("Add", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Add current position (Ctrl+X)  |  Fractional delay is specified with “,”.
+        /// </summary>
+        internal static string AddCurrentPositionHint {
+            get {
+                return ResourceManager.GetString("AddCurrentPositionHint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Number of blocks.
+        /// </summary>
+        internal static string BlockCount {
+            get {
+                return ResourceManager.GetString("BlockCount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на By coordinates.
+        /// </summary>
+        internal static string ByCoordinates {
+            get {
+                return ResourceManager.GetString("ByCoordinates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на To change language, you must restart the app 🔄
         ///💾 Don’t forget to save your preset first!.
         /// </summary>
@@ -71,7 +107,16 @@ namespace SmartClicker.Resources.Localization {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Click.
+        ///   Ищет локализованную строку, похожую на 🖱️Hold.
+        /// </summary>
+        internal static string Clamp {
+            get {
+                return ResourceManager.GetString("Clamp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на 🖱️Press.
         /// </summary>
         internal static string Click {
             get {
@@ -80,16 +125,106 @@ namespace SmartClicker.Resources.Localization {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Lap.
+        ///   Ищет локализованную строку, похожую на Click delay.
         /// </summary>
-        internal static string LapScore {
+        internal static string ClickDelay {
             get {
-                return ResourceManager.GetString("LapScore", resourceCulture);
+                return ResourceManager.GetString("ClickDelay", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Move.
+        ///   Ищет локализованную строку, похожую на Spread of delay.
+        /// </summary>
+        internal static string DelaySpread {
+            get {
+                return ResourceManager.GetString("DelaySpread", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Delay standard.
+        /// </summary>
+        internal static string DelayStandard {
+            get {
+                return ResourceManager.GetString("DelayStandard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Do not return.
+        /// </summary>
+        internal static string DoNotReturn {
+            get {
+                return ResourceManager.GetString("DoNotReturn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Hours.
+        /// </summary>
+        internal static string Hours {
+            get {
+                return ResourceManager.GetString("Hours", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на 🖱️Left button.
+        /// </summary>
+        internal static string L_MB {
+            get {
+                return ResourceManager.GetString("L_MB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Lap count.
+        /// </summary>
+        internal static string LapCount {
+            get {
+                return ResourceManager.GetString("LapCount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Load preset 💾.
+        /// </summary>
+        internal static string LoadPreset {
+            get {
+                return ResourceManager.GetString("LoadPreset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на 🖱️Middle button.
+        /// </summary>
+        internal static string M_MB {
+            get {
+                return ResourceManager.GetString("M_MB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Milliseconds.
+        /// </summary>
+        internal static string Milliseconds {
+            get {
+                return ResourceManager.GetString("Milliseconds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Minutes.
+        /// </summary>
+        internal static string Minutes {
+            get {
+                return ResourceManager.GetString("Minutes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на 🖱️Move.
         /// </summary>
         internal static string Move {
             get {
@@ -98,11 +233,104 @@ namespace SmartClicker.Resources.Localization {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Press.
+        ///   Ищет локализованную строку, похожую на Not by coordinates.
         /// </summary>
-        internal static string Press {
+        internal static string NotByCoordinates {
             get {
-                return ResourceManager.GetString("Press", resourceCulture);
+                return ResourceManager.GetString("NotByCoordinates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Note.
+        /// </summary>
+        internal static string Note {
+            get {
+                return ResourceManager.GetString("Note", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Number of clicks.
+        /// </summary>
+        internal static string NumberOfClicks {
+            get {
+                return ResourceManager.GetString("NumberOfClicks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Pause⏯️
+        ///(Ctrl+T).
+        /// </summary>
+        internal static string PausedOff {
+            get {
+                return ResourceManager.GetString("PausedOff", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Paused⏸️
+        /// (Ctrl+T).
+        /// </summary>
+        internal static string PausedOn {
+            get {
+                return ResourceManager.GetString("PausedOn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на 🖱️Right button.
+        /// </summary>
+        internal static string R_MB {
+            get {
+                return ResourceManager.GetString("R_MB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на   Random 
+        ///delay spread.
+        /// </summary>
+        internal static string RandomDelaySpread {
+            get {
+                return ResourceManager.GetString("RandomDelaySpread", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Replace♻️.
+        /// </summary>
+        internal static string Replace {
+            get {
+                return ResourceManager.GetString("Replace", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Save preset 💾.
+        /// </summary>
+        internal static string SavePreset {
+            get {
+                return ResourceManager.GetString("SavePreset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Seconds.
+        /// </summary>
+        internal static string Seconds {
+            get {
+                return ResourceManager.GetString("Seconds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Standard number of clicks.
+        /// </summary>
+        internal static string StandardNumberOfClicks {
+            get {
+                return ResourceManager.GetString("StandardNumberOfClicks", resourceCulture);
             }
         }
         
@@ -113,6 +341,52 @@ namespace SmartClicker.Resources.Localization {
         internal static string Start {
             get {
                 return ResourceManager.GetString("Start", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Start after.
+        /// </summary>
+        internal static string StartAfter {
+            get {
+                return ResourceManager.GetString("StartAfter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на  Stop❌
+        ///(Ctrl+R).
+        /// </summary>
+        internal static string Stop {
+            get {
+                return ResourceManager.GetString("Stop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Target X.
+        /// </summary>
+        internal static string TargetX {
+            get {
+                return ResourceManager.GetString("TargetX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Target Y.
+        /// </summary>
+        internal static string TargetY {
+            get {
+                return ResourceManager.GetString("TargetY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Return.
+        /// </summary>
+        internal static string ToReturn {
+            get {
+                return ResourceManager.GetString("ToReturn", resourceCulture);
             }
         }
     }

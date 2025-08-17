@@ -105,7 +105,7 @@ namespace SmartClicker.ViewModels
 
             DynamicData.StartUpdateCursorCommand.Execute(null);
 
-            Settings.SelectedUnit = "Секунды";
+            //Settings.SelectedUnit = Strings.Seconds;
         }
 
         private void OnGlobalKeyDown(object sender, int vkCode)
@@ -165,21 +165,18 @@ namespace SmartClicker.ViewModels
             float offset = 0;
             if (!string.IsNullOrEmpty(Input.StartOffsetEntry) && float.TryParse(Input.StartOffsetEntry, out float parsedOffset))
             {
-                switch (Settings.SelectedUnit)
+                if (Settings.SelectedUnit == Strings.Seconds)
                 {
-                    case "Секунды":
-                        parsedOffset *= 1000;
-                        break;
-
-                    case "Минуты":
-                        parsedOffset *= 1000 * 60;
-                        break;
-
-                    case "Часы":
-                        parsedOffset *= 1000 * 60 * 60;
-                        break;
+                    parsedOffset *= 1000; // Переводим секунды в миллисекунды
                 }
-
+                else if (Settings.SelectedUnit == Strings.Minutes)
+                {
+                    parsedOffset *= 1000 * 60; // Переводим минуты в миллисекунды
+                }
+                else if (Settings.SelectedUnit == Strings.Hours)
+                {
+                    parsedOffset *= 1000 * 60 * 60; // Переводим часы в миллисекунды
+                }
 
                 offset = parsedOffset;
             }
@@ -237,49 +234,34 @@ namespace SmartClicker.ViewModels
                                 else
                                 { MouseService.MoveCursor(block.TargetX, block.TargetY); }
 
-                                //if (block.IsRightClick == true)
-                                //{ MouseService.Click(block.IsRightClick); }
-                                //else
-                                //{ MouseService.Clamp(block.IsClamping); }
-
                                 if (block.ClickType == Strings.Click)
                                 {
-                                    switch (block.MouseButton)
+                                    if (block.MouseButton == Strings.L_MB)
                                     {
-                                        default:
-                                            MouseService.LeftClick();
-                                            break;
-
-                                        case "Л_КМ":
-                                            MouseService.LeftClick();
-                                            break;
-
-                                        case "П_КМ":
-                                            MouseService.RightClick();
-                                            break;
-
-                                        case "С_КМ":
-                                            MouseService.MiddleClick();
-                                            break;
+                                        MouseService.LeftClick();
+                                    }
+                                    else if (block.MouseButton == Strings.R_MB)
+                                    {
+                                        MouseService.RightClick();
+                                    }
+                                    else if (block.MouseButton == Strings.M_MB)
+                                    {
+                                        MouseService.MiddleClick();
                                     }
                                 }
-                                else if (block.ClickType == Strings.Press)
+                                else if (block.ClickType == Strings.Clamp)
                                 {
-                                    switch (block.MouseButton)
+                                    if (block.MouseButton == Strings.L_MB)
                                     {
-                                        default:
-                                            MouseService.LeftClamp();
-                                            break;
-
-                                        case "Л_КМ":
-                                            MouseService.LeftClamp();
-                                            break;
-                                        case "П_КМ":
-                                            MouseService.RightClamp();
-                                            break;
-                                        case "С_КМ":
-                                            MouseService.MiddleClamp();
-                                            break;
+                                        MouseService.LeftClamp();
+                                    }
+                                    else if (block.MouseButton == Strings.R_MB)
+                                    {
+                                        MouseService.RightClamp();
+                                    }
+                                    else if (block.MouseButton == Strings.M_MB)
+                                    {
+                                        MouseService.MiddleClamp();
                                     }
                                 }
 
@@ -287,15 +269,15 @@ namespace SmartClicker.ViewModels
                                 if (Settings.BackMove)
                                 { MouseService.MoveCursor(pastCoordinateX, pastCoordinateY); }
 
-                                DynamicData.StepScoreLabel = $"Кликов сделано: {i + 1} / {block.StepScore}";
-                                DynamicData.LapScore = $"{Strings.LapScore} N: {u + 1} / {lapScore}";
+                                DynamicData.StepScoreLabel = $"{Strings.NumberOfClicks}: {i + 1} / {block.StepScore}";
+                                DynamicData.LapScore = $"{Strings.LapCount} N: {u + 1} / {lapScore}";
 
                                 // Добавление к интервалу случайную задержку в пользовательском диапазоне
                                 int interval = block.ClickInterval;
 
                                 if (block.RandomOfDelay == 0)
                                 {
-                                    interval = Math.Max(0, interval + random.Next(-Input.RandomOfDelay, Input.RandomOfDelay + 1));
+                                    interval = Math.Max(0, interval + random.Next(-Convert.ToInt32(Input.RandomOfDelay), Convert.ToInt32(Input.RandomOfDelay) + 1));
                                 }
                                 else
                                 {

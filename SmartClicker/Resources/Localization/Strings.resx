@@ -117,24 +117,118 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Click" xml:space="preserve">
-    <value>Click</value>
+  <data name="ChangeLanguageWarning" xml:space="preserve">
+    <value>To change language, you must restart the app 🔄
+💾 Don’t forget to save your preset first!</value>
   </data>
-  <data name="Press" xml:space="preserve">
-    <value>Press</value>
+  <data name="DelayStandard" xml:space="preserve">
+    <value>Delay standard</value>
+  </data>
+  <data name="StandardNumberOfClicks" xml:space="preserve">
+    <value>Standard number of clicks</value>
+  </data>
+  <data name="DelaySpread" xml:space="preserve">
+    <value>Spread of delay</value>
+  </data>
+  <data name="NotByCoordinates" xml:space="preserve">
+    <value>Not by coordinates</value>
+  </data>
+  <data name="ByCoordinates" xml:space="preserve">
+    <value>By coordinates</value>
+  </data>
+  <data name="ToReturn" xml:space="preserve">
+    <value>Return</value>
+  </data>
+  <data name="DoNotReturn" xml:space="preserve">
+    <value>Do not return</value>
+  </data>
+  <data name="L_MB" xml:space="preserve">
+    <value>🖱️Left button</value>
+  </data>
+  <data name="R_MB" xml:space="preserve">
+    <value>🖱️Right button</value>
+  </data>
+  <data name="M_MB" xml:space="preserve">
+    <value>🖱️Middle button</value>
   </data>
   <data name="Move" xml:space="preserve">
-    <value>Move</value>
+    <value>🖱️Move</value>
+  </data>
+  <data name="TargetX" xml:space="preserve">
+    <value>Target X</value>
+  </data>
+  <data name="TargetY" xml:space="preserve">
+    <value>Target Y</value>
+  </data>
+  <data name="ClickDelay" xml:space="preserve">
+    <value>Click delay</value>
+  </data>
+  <data name="RandomDelaySpread" xml:space="preserve">
+    <value>  Random 
+delay spread</value>
+  </data>
+  <data name="NumberOfClicks" xml:space="preserve">
+    <value>Number of clicks</value>
+  </data>
+  <data name="Note" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="BlockCount" xml:space="preserve">
+    <value>Number of blocks</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Add🧩</value>
+  </data>
+  <data name="Replace" xml:space="preserve">
+    <value>Replace♻️</value>
+  </data>
+  <data name="LapCount" xml:space="preserve">
+    <value>Lap count</value>
+  </data>
+  <data name="StartAfter" xml:space="preserve">
+    <value>Start after</value>
+  </data>
+  <data name="Milliseconds" xml:space="preserve">
+    <value>Milliseconds</value>
+  </data>
+  <data name="Seconds" xml:space="preserve">
+    <value>Seconds</value>
+  </data>
+  <data name="Minutes" xml:space="preserve">
+    <value>Minutes</value>
+  </data>
+  <data name="Hours" xml:space="preserve">
+    <value>Hours</value>
+  </data>
+  <data name="AddCurrentPositionHint" xml:space="preserve">
+    <value>Add current position (Ctrl+X)  |  Fractional delay is specified with “,”</value>
+  </data>
+  <data name="SavePreset" xml:space="preserve">
+    <value>Save preset 💾</value>
+  </data>
+  <data name="LoadPreset" xml:space="preserve">
+    <value>Load preset 💾</value>
+  </data>
+  <data name="PausedOn" xml:space="preserve">
+    <value>Paused⏸️
+ (Ctrl+T)</value>
+  </data>
+  <data name="PausedOff" xml:space="preserve">
+    <value>Pause⏯️
+(Ctrl+T)</value>
+  </data>
+  <data name="Stop" xml:space="preserve">
+    <value> Stop❌
+(Ctrl+R)</value>
   </data>
   <data name="Start" xml:space="preserve">
     <value>Start🔥
 (Ctrl+E)</value>
   </data>
-  <data name="LapScore" xml:space="preserve">
-    <value>Lap</value>
+  <data name="Click" xml:space="preserve">
+    <value>🖱️Press</value>
   </data>
-  <data name="ChangeLanguageWarning" xml:space="preserve">
-    <value>To change language, you must restart the app 🔄
-💾 Don’t forget to save your preset first!</value>
+  <data name="Clamp" xml:space="preserve">
+    <value>🖱️Hold</value>
   </data>
 </root>

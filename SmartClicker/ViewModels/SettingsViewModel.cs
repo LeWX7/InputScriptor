@@ -5,6 +5,7 @@ using SmartClicker.Models;
 using SmartClicker.Views;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using SmartClicker.Resources.Localization;
 
 namespace SmartClicker.ViewModels
 {
@@ -16,20 +17,6 @@ namespace SmartClicker.ViewModels
             new LanguageItem { DisplayName = "(EN) English", Code = "en" },
             new LanguageItem { DisplayName = "(DE) Deutsch", Code = "de" }
         ];
-
-        //private LanguageItem _selectedLanguage;
-        //public LanguageItem SelectedLanguage
-        //{
-        //    get => _selectedLanguage;
-        //    set
-        //    {
-        //        if (_selectedLanguage != value)
-        //        {
-        //            _selectedLanguage = value;
-        //            OnPropertyChanged();
-        //        }
-        //    }
-        //}
 
         private LanguageItem _selectedLanguage;
         public LanguageItem SelectedLanguage
@@ -50,17 +37,25 @@ namespace SmartClicker.ViewModels
             }
         }
 
-        public SettingsViewModel()
+        public IList<string> TimeUnitOptions { get; } =
+        new List<string>
         {
-            var saved = Preferences.Get("AppLanguage", "en");
-            SelectedLanguage = Languages.FirstOrDefault(l => l.Code == saved);
-        }
-
-        private string _selectedUnit;
+            Strings.Milliseconds,
+            Strings.Seconds,
+            Strings.Minutes,
+            Strings.Hours
+        };
+        private string _selectedUnit = Strings.Seconds;
         public string SelectedUnit
         {
             get => _selectedUnit;
             set { _selectedUnit = value; OnPropertyChanged(); }
+        }
+
+        public SettingsViewModel()
+        {
+            var saved = Preferences.Get("AppLanguage", "en");
+            SelectedLanguage = Languages.FirstOrDefault(l => l.Code == saved);
         }
 
         private bool _onCoordinates;

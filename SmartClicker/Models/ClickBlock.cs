@@ -6,7 +6,7 @@ namespace SmartClicker.Models
 {
     public class ClickBlock : INotifyPropertyChanged
     {
-        private string _mouseButton = "Л_КМ";
+        private string _mouseButton = Strings.L_MB;
         private string _clickType = Strings.Click;
         private int _targetX;
         private int _targetY;
@@ -15,6 +15,13 @@ namespace SmartClicker.Models
         private int _randomOfDelay;
         private string _note;
 
+        public IList<string> MouseButtonOptions { get; } =
+        new List<string>
+        {
+            Strings.L_MB,
+            Strings.R_MB,
+            Strings.M_MB
+        };
         public string MouseButton
         {
             get => _mouseButton;
@@ -25,7 +32,7 @@ namespace SmartClicker.Models
         new List<string>
         {
             Strings.Click,
-            Strings.Press,
+            Strings.Clamp,
             Strings.Move
         };
         public string ClickType

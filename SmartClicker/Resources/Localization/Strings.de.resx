@@ -117,24 +117,118 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Click" xml:space="preserve">
-    <value>Drücken</value>
+  <data name="ChangeLanguageWarning" xml:space="preserve">
+    <value>To change language, you must restart the app 🔄
+💾 Don’t forget to save your preset first!</value>
   </data>
-  <data name="Press" xml:space="preserve">
-    <value>Halten</value>
+  <data name="DelayStandard" xml:space="preserve">
+    <value>Standardverzögerung</value>
+  </data>
+  <data name="StandardNumberOfClicks" xml:space="preserve">
+    <value>Standardanzahl der Klicks</value>
+  </data>
+  <data name="DelaySpread" xml:space="preserve">
+    <value>Verzögerungsspanne</value>
+  </data>
+  <data name="NotByCoordinates" xml:space="preserve">
+    <value>Nicht nach Koordinaten</value>
+  </data>
+  <data name="ByCoordinates" xml:space="preserve">
+    <value>Nach Koordinaten</value>
+  </data>
+  <data name="ToReturn" xml:space="preserve">
+    <value>Zurückkehren</value>
+  </data>
+  <data name="DoNotReturn" xml:space="preserve">
+    <value>Nicht zurückkehren</value>
+  </data>
+  <data name="L_MB" xml:space="preserve">
+    <value>🖱️Linke Maustaste</value>
+  </data>
+  <data name="R_MB" xml:space="preserve">
+    <value>🖱️Rechte Maustaste</value>
+  </data>
+  <data name="M_MB" xml:space="preserve">
+    <value>🖱️Mittlere Maustaste</value>
   </data>
   <data name="Move" xml:space="preserve">
-    <value>Bewegen</value>
+    <value>🖱️Bewegen</value>
+  </data>
+  <data name="TargetX" xml:space="preserve">
+    <value>Ziel X</value>
+  </data>
+  <data name="TargetY" xml:space="preserve">
+    <value>Ziel Y</value>
+  </data>
+  <data name="ClickDelay" xml:space="preserve">
+    <value>Klickverzögerung</value>
+  </data>
+  <data name="RandomDelaySpread" xml:space="preserve">
+    <value>        Zufällige 
+Verzögerungsspanne</value>
+  </data>
+  <data name="NumberOfClicks" xml:space="preserve">
+    <value>Anzahl der Klicks</value>
+  </data>
+  <data name="Note" xml:space="preserve">
+    <value>Notiz</value>
+  </data>
+  <data name="BlockCount" xml:space="preserve">
+    <value>Anzahl der Blöcke</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Hinzufügen🧩</value>
+  </data>
+  <data name="Replace" xml:space="preserve">
+    <value>Ersetzen♻️</value>
+  </data>
+  <data name="LapCount" xml:space="preserve">
+    <value>Anzahl der Runden</value>
+  </data>
+  <data name="StartAfter" xml:space="preserve">
+    <value>Start nach</value>
+  </data>
+  <data name="Milliseconds" xml:space="preserve">
+    <value>Millisekunden</value>
+  </data>
+  <data name="Seconds" xml:space="preserve">
+    <value>Sekunden</value>
+  </data>
+  <data name="Minutes" xml:space="preserve">
+    <value>Minuten</value>
+  </data>
+  <data name="Hours" xml:space="preserve">
+    <value>Stunden</value>
+  </data>
+  <data name="AddCurrentPositionHint" xml:space="preserve">
+    <value>Aktuelle Position hinzufügen (Ctrl+X)  |  Bruchteilverzögerung mit “,” angeben</value>
+  </data>
+  <data name="SavePreset" xml:space="preserve">
+    <value>Preset speichern 💾</value>
+  </data>
+  <data name="LoadPreset" xml:space="preserve">
+    <value>Preset laden 💾</value>
+  </data>
+  <data name="PausedOn" xml:space="preserve">
+    <value>Pausiert⏸️
+  (Ctrl+T)</value>
+  </data>
+  <data name="PausedOff" xml:space="preserve">
+    <value>Pause⏯️
+(Ctrl+T)</value>
+  </data>
+  <data name="Stop" xml:space="preserve">
+    <value>Beenden❌
+  (Ctrl+R)</value>
   </data>
   <data name="Start" xml:space="preserve">
     <value>Start🔥
 (Ctrl+E)</value>
   </data>
-  <data name="LapScore" xml:space="preserve">
-    <value> Kreis</value>
+  <data name="Click" xml:space="preserve">
+    <value>🖱️Drücken</value>
   </data>
-  <data name="ChangeLanguageWarning" xml:space="preserve">
-    <value>To change language, you must restart the app 🔄
-💾 Don’t forget to save your preset first!</value>
+  <data name="Clamp" xml:space="preserve">
+    <value>🖱️Halten</value>
   </data>
 </root>

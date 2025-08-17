@@ -25,7 +25,7 @@
         </Grid.ColumnDefinitions>
 
         <!-- Верхняя панель с информацией -->
-        <StackLayout Grid.Row="0" Orientation="Horizontal" Padding="5" Margin="5,0,0,45">
+        <StackLayout Grid.Row="0" Orientation="Horizontal" Padding="16,0,0,48">
             <controls:HeaderLabel Text="{Binding DynamicData.CurrentX}" />
             <controls:HeaderLabel Text="{Binding DynamicData.CurrentY}" Margin="10,0,0,0" />
             <controls:MediumLabel Text="{Binding DynamicData.StepScoreLabel}" Margin="25,0,0,0" />
@@ -35,23 +35,23 @@
         <!-- Настройки -->
         <HorizontalStackLayout Grid.Row="0" Spacing="15" Margin="20,55,213,0" VerticalOptions="Start" HorizontalOptions="Start">
             <VerticalStackLayout Spacing="5">
-                <controls:CustomEntry Placeholder="Стандарт задержки" Text="{Binding Input.BlockDelayEntry}"/>
-                <controls:CustomEntry Placeholder="Стандарт кол-ва нажатий" Text="{Binding Input.BlockQuantityEntry}"/>
+                <controls:CustomEntry Placeholder="{x:Static res:Strings.DelayStandard}" Text="{Binding Input.BlockDelayEntry}"/>
+                <controls:CustomEntry Placeholder="{x:Static res:Strings.StandardNumberOfClicks}" Text="{Binding Input.BlockQuantityEntry}"/>
             </VerticalStackLayout>
 
-            <controls:CustomEntry Placeholder="Разброс &#x0a; задержки" Text="{Binding Input.RandomOfDelay}"/>
+            <controls:CustomEntry Placeholder="{x:Static res:Strings.DelaySpread}" Text="{Binding Input.RandomOfDelay}"/>
 
             <VerticalStackLayout Spacing="5">
                 <controls:CustomSwitchV2 IsToggled="{Binding Settings.OnCoordinates}"
-                    OnText="Не по координатам"
-                    OffText="По координатам"
+                    OnText="{x:Static res:Strings.NotByCoordinates}"
+                    OffText="{x:Static res:Strings.ByCoordinates}"
                     OnBackgroundColor="#1B1B1B"
                     OffBackgroundColor="#1B1B1B"
                     OnTextColor="#FFD2B6"
                     OffTextColor="#D2FFDE"/>
                 <controls:CustomSwitchV2 IsToggled="{Binding Settings.BackMove}"
-                    OnText="Возвращать"
-                    OffText="Не возвращать"
+                    OnText="{x:Static res:Strings.ToReturn}"
+                    OffText="{x:Static res:Strings.DoNotReturn}"
                     OnBackgroundColor="#1B1B1B"
                     OffBackgroundColor="#1B1B1B"
                     OnTextColor="#FFD2B6"
@@ -70,47 +70,37 @@
             </HorizontalStackLayout>
         </StackLayout>
 
-
         <!-- Основное содержимое с блоками кликов -->
         <ScrollView Grid.Row="1">
             <VerticalStackLayout x:Name="EntriesStackLayout" Padding="15,0" Spacing="15">
-                <!-- CollectionView с привязкой к ClickBlocks -->
                 <CollectionView ItemsSource="{Binding ClickBlocks}">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <StackLayout>
                                 <HorizontalStackLayout Spacing="10" Padding="5">
                                     <VerticalStackLayout Spacing="5">
-                                        <Picker x:Name="MouseButtonPicker" TextColor="WhiteSmoke"
-                                            SelectedItem="{Binding MouseButton, Mode=TwoWay}">
-                                            <Picker.ItemsSource>
-                                                <x:Array Type="{x:Type x:String}">
-                                                    <x:String>Л_КМ</x:String>
-                                                    <x:String>П_КМ</x:String>
-                                                    <x:String>С_КМ</x:String>
-                                                </x:Array>
-                                            </Picker.ItemsSource>
-                                        </Picker>
-
+                                        <Picker TextColor="WhiteSmoke"
+                                                SelectedItem="{Binding MouseButton}"
+                                                ItemsSource="{Binding MouseButtonOptions}"/>
                                         <Picker TextColor="WhiteSmoke"
                                                 SelectedItem="{Binding ClickType, Mode=TwoWay}"
                                                 ItemsSource="{Binding ClickTypeOptions}"/>
                                     </VerticalStackLayout>
 
                                     <VerticalStackLayout Spacing="5">
-                                        <controls:CustomEntry Placeholder="Целевая X" Text="{Binding TargetX}" />
-                                        <controls:CustomEntry Placeholder="Целевая Y" Text="{Binding TargetY}" />
+                                        <controls:CustomEntry Placeholder="{x:Static res:Strings.TargetX}" Text="{Binding TargetX}" />
+                                        <controls:CustomEntry Placeholder="{x:Static res:Strings.TargetY}" Text="{Binding TargetY}" />
                                     </VerticalStackLayout>
 
                                     <VerticalStackLayout Spacing="5">
-                                        <controls:CustomEntry Placeholder="Задержка" Text="{Binding ClickInterval}" />
-                                        <controls:CustomEntry Placeholder="Разброс &#x0a; задержки" Text="{Binding RandomOfDelay}"/>
+                                        <controls:CustomEntry Placeholder="{x:Static res:Strings.ClickDelay}" Text="{Binding ClickInterval}" />
+                                        <controls:CustomEntry Placeholder="{x:Static res:Strings.RandomDelaySpread}" Text="{Binding RandomOfDelay}"/>
                                     </VerticalStackLayout>
 
-                                    <controls:CustomEntry Placeholder="Кол-во нажатий" Text="{Binding StepScore}" />
+                                    <controls:CustomEntry Placeholder="{x:Static res:Strings.NumberOfClicks}" Text="{Binding StepScore}" />
                                 </HorizontalStackLayout>
                                 <VerticalStackLayout Margin="5,0,0,10" HorizontalOptions="Start">
-                                    <controls:CustomEntry MaximumWidthRequest="435" Placeholder="Заметка"
+                                    <controls:CustomEntry MaximumWidthRequest="435" Placeholder="{x:Static res:Strings.Note}"
                                                           Text="{Binding Note}"/>
                                 </VerticalStackLayout>
                             </StackLayout>
@@ -122,57 +112,49 @@
 
         <!-- Правая панель управления -->
         <StackLayout Grid.Row="1" Orientation="Vertical" Padding="0" Spacing="10" Margin="0,0,15,0" HorizontalOptions="End">
-            <controls:CustomEntry Placeholder="Кол-во блоков" Text="{Binding Input.BlockCountEntry}" />
+            <controls:CustomEntry Placeholder="{x:Static res:Strings.BlockCount}" Text="{Binding Input.BlockCountEntry}" />
             <HorizontalStackLayout HorizontalOptions="Center">
-                <controls:CustomButton Text="Добавить🧩" Command="{Binding AddBlocksCommand}" />
-                <controls:CustomButton Text="заменить♻️" Command="{Binding ReAddBlocksCommand}" />
+                <controls:CustomButton Text="{x:Static res:Strings.Add}" Command="{Binding AddBlocksCommand}" />
+                <controls:CustomButton Text="{x:Static res:Strings.Replace}" Command="{Binding ReAddBlocksCommand}" />
             </HorizontalStackLayout>
-            <controls:CustomEntry Placeholder="Кол-во кругов" Text="{Binding Input.BlockLapEntry}" Margin="0,5,0,0" />
+            <controls:CustomEntry Placeholder="{x:Static res:Strings.LapCount}" Text="{Binding Input.BlockLapEntry}" Margin="0,5,0,0" />
             <HorizontalStackLayout Spacing="7">
-                <controls:CustomEntry Placeholder="Начать через" Text="{Binding Input.StartOffsetEntry}" />
-                <Picker x:Name="UnitPicker" TextColor="WhiteSmoke"
-                        SelectedItem="{Binding Settings.SelectedUnit, Mode=TwoWay}">
-                    <Picker.ItemsSource>
-                        <x:Array Type="{x:Type x:String}">
-                            <x:String>Миллисекунды</x:String>
-                            <x:String>Секунды</x:String>
-                            <x:String>Минуты</x:String>
-                            <x:String>Часы</x:String>
-                        </x:Array>
-                    </Picker.ItemsSource>
-                </Picker>
+                <controls:CustomEntry Placeholder="{x:Static res:Strings.StartAfter}" Text="{Binding Input.StartOffsetEntry}" />
+
+                <Picker TextColor="WhiteSmoke"
+                        SelectedItem="{Binding Settings.SelectedUnit}"
+                        ItemsSource="{Binding Settings.TimeUnitOptions}"/>
             </HorizontalStackLayout>
         </StackLayout>
 
         <!-- Нижняя панель с кнопками управления -->
         <StackLayout Grid.Row="2" Orientation="Vertical" Padding="10" Spacing="10">
             <Label HorizontalOptions="End" BackgroundColor="#2C2C2C" FontSize="Micro" TextColor="White" 
-                Text= "Добавить текущую позицию (Ctrl+X)  |  Дробная задержка указывается через “,”" />
+                Text= "{x:Static res:Strings.AddCurrentPositionHint}" />
 
             <HorizontalStackLayout Spacing="5" HorizontalOptions="End">
 
                 <HorizontalStackLayout Spacing="10" HorizontalOptions="Start" Margin="0,0,110,0">
-                    <controls:CustomButton Text="Сохранить пресет 💾" Command="{Binding SavePresetCommand}" />
+                    <controls:CustomButton Text="{x:Static res:Strings.SavePreset}" Command="{Binding SavePresetCommand}" />
 
                     <VerticalStackLayout Spacing="3">
                         <Picker ItemsSource="{Binding PresetFiles}"
                                 SelectedItem="{Binding SelectedPresetFile}"
                                 MaximumWidthRequest="175"
                                 HeightRequest="30"/>
-                        <controls:CustomButton Text="Загрузить пресет 💾" Command="{Binding LoadPresetCommand}" />
+                        <controls:CustomButton Text="{x:Static res:Strings.LoadPreset}" Command="{Binding LoadPresetCommand}" />
                     </VerticalStackLayout>
                 </HorizontalStackLayout>
 
-
                 <controls:CustomSwitchV2 IsToggled="{Binding IsPaused, Mode=TwoWay}"  Margin="0,0,25,0"
-                        OnText="На паузе⏸️&#x0a;   (Ctrl+T)"
-                        OffText="Пауза⏯️&#x0a; (Ctrl+T)"
+                        OnText="{x:Static res:Strings.PausedOn}"
+                        OffText="{x:Static res:Strings.PausedOff}"
                         OnBackgroundColor="#7CA37F"
                         OffBackgroundColor="#5CA35F"
                         OnTextColor="White"
                         OffTextColor="#1F1F1F"/>
 
-                <controls:CustomButton Text="Завершить❌&#x0a;    (Ctrl+R)" Command="{Binding EndCommand}"/>
+                <controls:CustomButton Text="{x:Static res:Strings.Stop}" Command="{Binding EndCommand}"/>
                 <controls:CustomButton Text="{x:Static res:Strings.Start}" Command="{Binding StartCommand}"/>
             </HorizontalStackLayout>
         </StackLayout>

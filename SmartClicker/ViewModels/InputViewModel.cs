@@ -33,15 +33,15 @@ namespace SmartClicker.ViewModels
             set { _blockDelayEntry = value; OnPropertyChanged(); }
         }
 
-        private string _blockQuantityEntry;
+        private string _blockQuantityEntry = Convert.ToString(1);
         public string BlockQuantityEntry
         {
             get => _blockQuantityEntry;
             set { _blockQuantityEntry = value; OnPropertyChanged(); }
         }
 
-        private int _randomOfDelay;
-        public int RandomOfDelay
+        private string _randomOfDelay;
+        public string RandomOfDelay
         {
             get => _randomOfDelay;
             set { _randomOfDelay = value; OnPropertyChanged(); }

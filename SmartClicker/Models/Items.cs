@@ -12,4 +12,10 @@ namespace SmartClicker.Models
         public string DisplayName { get; set; } // "Русский", "English", "Deutsch"
         public override string ToString() => DisplayName;
     }
+
+    //public class TimeUnitItem
+    //{
+    //    public string DisplayUnit { get; set; }        // "Milliseconds", "Seconds", "Minutes", "Hours"
+    //    public override string ToString() => DisplayUnit;
+    //}
 }

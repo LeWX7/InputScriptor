@@ -37,7 +37,7 @@ namespace SmartClicker.Views
         {
             var exePath = Environment.ProcessPath; // путь к исполняемому файлу
             Process.Start(exePath);                // запускаем новый процесс
-            Environment.Exit(0);                    // завершаем текущее приложение
+            Environment.Exit(0);                   // завершаем текущее приложение
         }
 
         // Мягкий перезапуск: пересоздаём главную страницу
