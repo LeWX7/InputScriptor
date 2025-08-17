@@ -1,5 +1,8 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using Microsoft.Maui.Storage;
+using Microsoft.UI.Xaml;
 using SmartClicker.Models;
+using SmartClicker.Views;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
@@ -7,39 +10,51 @@ namespace SmartClicker.ViewModels
 {
     public class SettingsViewModel : INotifyPropertyChanged
     {
-        //public IList<LanguageItem> Languages { get; } = new List<LanguageItem>
-        //{
-        //new LanguageItem { Code = "ru", DisplayName = "(RU) Русский" },
-        //new LanguageItem { Code = "en", DisplayName = "(EN) English" },
-        //new LanguageItem { Code = "de", DisplayName = "(DE) Deutsch" }
-        //};
+        public IList<LanguageItem> Languages { get; } =
+        [
+            new LanguageItem { DisplayName = "(RU) Русский", Code = "ru" },
+            new LanguageItem { DisplayName = "(EN) English", Code = "en" },
+            new LanguageItem { DisplayName = "(DE) Deutsch", Code = "de" }
+        ];
 
-        //private languageitem _selectedlanguage;
-        //public languageitem selectedlanguage
+        //private LanguageItem _selectedLanguage;
+        //public LanguageItem SelectedLanguage
         //{
-        //    get => _selectedlanguage;
+        //    get => _selectedLanguage;
         //    set
         //    {
-        //        if (_selectedlanguage != value)
+        //        if (_selectedLanguage != value)
         //        {
-        //            _selectedlanguage = value;
-        //            onpropertychanged();
-
-        //            if (value != null)
-        //            {
-        //                preferences.set("applanguage", value.code);
-        //                сообщаем пользователю, что требуется перезапуск
-        //                 например: showrestartrequired = true;
-        //            }
+        //            _selectedLanguage = value;
+        //            OnPropertyChanged();
         //        }
         //    }
         //}
 
-        //public SettingsViewModel()
-        //{
-        //    var saved = Preferences.Get("AppLanguage", "en");
-        //    SelectedLanguage = Languages.FirstOrDefault(l => l.Code == saved);
-        //}
+        private LanguageItem _selectedLanguage;
+        public LanguageItem SelectedLanguage
+        {
+            get => _selectedLanguage;
+            set
+            {
+                if (_selectedLanguage != value)
+                {
+                    _selectedLanguage = value;
+                    OnPropertyChanged();
+
+                    if (value != null)
+                    {
+                        Preferences.Set("AppLanguage", value.Code);
+                    }
+                }
+            }
+        }
+
+        public SettingsViewModel()
+        {
+            var saved = Preferences.Get("AppLanguage", "en");
+            SelectedLanguage = Languages.FirstOrDefault(l => l.Code == saved);
+        }
 
         private string _selectedUnit;
         public string SelectedUnit

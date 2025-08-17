@@ -133,4 +133,8 @@
   <data name="LapScore" xml:space="preserve">
     <value> Kreis</value>
   </data>
+  <data name="ChangeLanguageWarning" xml:space="preserve">
+    <value>To change language, you must restart the app 🔄
+💾 Don’t forget to save your preset first!</value>
+  </data>
 </root>

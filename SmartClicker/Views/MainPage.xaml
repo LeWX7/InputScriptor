@@ -60,9 +60,14 @@
         </HorizontalStackLayout>
 
         <StackLayout HorizontalOptions="End" VerticalOptions="Start">
-            <Picker ItemsSource="{Binding Languages}"
-                    SelectedItem="{Binding SelectedLanguage}"
-                    ItemDisplayBinding="{Binding DisplayName}"/>
+            <HorizontalStackLayout>
+                <Button Text="💾"
+                        Command="{Binding ChangeLanguageCommand}"/>
+                <Picker x:Name="LanguagePicker"
+                        ItemsSource="{Binding Settings.Languages}"
+                        SelectedItem="{Binding Settings.SelectedLanguage}"
+                        ItemDisplayBinding="{Binding DisplayName}"/>
+            </HorizontalStackLayout>
         </StackLayout>
 
 
@@ -87,18 +92,7 @@
                                             </Picker.ItemsSource>
                                         </Picker>
 
-                                        <!--<Picker x:Name="ClickTypePicker" TextColor="WhiteSmoke"
-                                            SelectedItem="{Binding ClickType, Mode=TwoWay}">
-                                            <Picker.ItemsSource>
-                                                <x:Array Type="{x:Type x:String}">
-                                                    <x:String>Нажать</x:String>
-                                                    <x:String>Зажать</x:String>
-                                                    <x:String>Переместить</x:String>
-                                                </x:Array>
-                                            </Picker.ItemsSource>
-                                        </Picker>-->
-
-                                        <Picker x:Name="ClickTypePicker" TextColor="WhiteSmoke"
+                                        <Picker TextColor="WhiteSmoke"
                                                 SelectedItem="{Binding ClickType, Mode=TwoWay}"
                                                 ItemsSource="{Binding ClickTypeOptions}"/>
                                     </VerticalStackLayout>
@@ -179,7 +173,7 @@
                         OffTextColor="#1F1F1F"/>
 
                 <controls:CustomButton Text="Завершить❌&#x0a;    (Ctrl+R)" Command="{Binding EndCommand}"/>
-                <controls:CustomButton Text="{x:Static res:Strings.Start}" Command="{Binding StartCommand}" />
+                <controls:CustomButton Text="{x:Static res:Strings.Start}" Command="{Binding StartCommand}"/>
             </HorizontalStackLayout>
         </StackLayout>
     </Grid>

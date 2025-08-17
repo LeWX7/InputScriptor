@@ -61,6 +61,16 @@ namespace SmartClicker.Resources.Localization {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на To change language, you must restart the app 🔄
+        ///💾 Don’t forget to save your preset first!.
+        /// </summary>
+        internal static string ChangeLanguageWarning {
+            get {
+                return ResourceManager.GetString("ChangeLanguageWarning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Click.
         /// </summary>
         internal static string Click {

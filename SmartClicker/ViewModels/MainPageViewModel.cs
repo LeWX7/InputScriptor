@@ -14,6 +14,7 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Collections.Immutable;
 using SmartClicker.Resources.Localization;
+using SmartClicker.Views;
 
 namespace SmartClicker.ViewModels
 {
@@ -60,6 +61,7 @@ namespace SmartClicker.ViewModels
         public ICommand RecordCommand { get; }
         public ICommand SavePresetCommand { get; }
         public ICommand LoadPresetCommand { get; }
+        public ICommand ChangeLanguageCommand { get; }
 
         public bool IsPaused
         {
@@ -77,36 +79,8 @@ namespace SmartClicker.ViewModels
 
         Random random = new Random();
 
-        public ObservableCollection<LanguageItem> Languages { get; } =
-        [
-            new LanguageItem { DisplayName = "(RU) Русский", Code = "ru" },
-            new LanguageItem { DisplayName = "(EN) English", Code = "en" },
-            new LanguageItem { DisplayName = "(DE) Deutsch", Code = "de" }
-        ];
-
-        private LanguageItem _selectedLanguage;
-        public LanguageItem SelectedLanguage
-        {
-            get => _selectedLanguage;
-            set
-            {
-                if (SetProperty(ref _selectedLanguage, value))
-                {
-                    if (value != null)
-                    {
-                        Preferences.Set("AppLanguage", value.Code);
-                        // сообщаем пользователю, что требуется перезапуск
-                        // например: ShowRestartRequired = true;
-                    }
-                }
-            }
-        }
-
         public MainPageViewModel()
         {
-            var saved = Preferences.Get("AppLanguage", "en");
-            SelectedLanguage = Languages.FirstOrDefault(l => l.Code == saved);
-
             _keyboardHookService = new KeyboardHookService();
             _keyboardHookService.KeyDown += OnGlobalKeyDown;
 
@@ -125,6 +99,7 @@ namespace SmartClicker.ViewModels
             RecordCommand = new Command(async () => await RecordAsync());
             SavePresetCommand = new Command(async () => await OnSavePresetClicked(null, null));
             LoadPresetCommand = new Command(async () => await OnLoadPresetClicked(null, null));
+            ChangeLanguageCommand = new Command(CangeLanguage);
 
             LoadPresetList();
 
@@ -435,6 +410,11 @@ namespace SmartClicker.ViewModels
         {
             var files = _presetService.GetAllPresetNames();
             PresetFiles = new ObservableCollection<string>(files);
+        }
+
+        private void CangeLanguage()
+        {
+            MainPage.ShowWarning(Strings.ChangeLanguageWarning);
         }
     }
 }
