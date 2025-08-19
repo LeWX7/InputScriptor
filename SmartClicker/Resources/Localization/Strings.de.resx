@@ -171,7 +171,7 @@ Verzögerungsspanne</value>
     <value>Anzahl der Klicks</value>
   </data>
   <data name="Note" xml:space="preserve">
-    <value>Notiz</value>
+    <value>Notiz📒</value>
   </data>
   <data name="BlockCount" xml:space="preserve">
     <value>Anzahl der Blöcke</value>
@@ -200,9 +200,6 @@ Verzögerungsspanne</value>
   <data name="Hours" xml:space="preserve">
     <value>Stunden</value>
   </data>
-  <data name="AddCurrentPositionHint" xml:space="preserve">
-    <value>Aktuelle Position hinzufügen (Ctrl+X)  |  Bruchteilverzögerung mit “,” angeben</value>
-  </data>
   <data name="SavePreset" xml:space="preserve">
     <value>Preset speichern 💾</value>
   </data>
@@ -230,5 +227,13 @@ Verzögerungsspanne</value>
   </data>
   <data name="Clamp" xml:space="preserve">
     <value>🖱️Halten</value>
+  </data>
+  <data name="Explanation" xml:space="preserve">
+    <value>Erklärung🧑‍🏫</value>
+  </data>
+  <data name="CommonExplanation" xml:space="preserve">
+    <value>⌨️Aktionspunkt mit der aktuellen Cursorposition hinzufügen (Strg+X)
+⏱️Die Bruchverzögerung wird mit "," (Komma) angegeben
+(1,5 minuten = 1 Minute 30 Sekunden)</value>
   </data>
 </root>

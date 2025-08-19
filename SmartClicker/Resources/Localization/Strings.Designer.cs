@@ -70,15 +70,6 @@ namespace SmartClicker.Resources.Localization {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Add current position (Ctrl+X)  |  Fractional delay is specified with “,”.
-        /// </summary>
-        internal static string AddCurrentPositionHint {
-            get {
-                return ResourceManager.GetString("AddCurrentPositionHint", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Ищет локализованную строку, похожую на Number of blocks.
         /// </summary>
         internal static string BlockCount {
@@ -134,6 +125,17 @@ namespace SmartClicker.Resources.Localization {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на ⌨️Add an action point with the current cursor position (Ctrl+X)
+        ///⏱️Fractional delay is set using &quot;,“ (comma)
+        ///(1.5 minutes = 1 minute and 30 seconds).
+        /// </summary>
+        internal static string CommonExplanation {
+            get {
+                return ResourceManager.GetString("CommonExplanation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Spread of delay.
         /// </summary>
         internal static string DelaySpread {
@@ -157,6 +159,15 @@ namespace SmartClicker.Resources.Localization {
         internal static string DoNotReturn {
             get {
                 return ResourceManager.GetString("DoNotReturn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Explanation🧑‍🏫.
+        /// </summary>
+        internal static string Explanation {
+            get {
+                return ResourceManager.GetString("Explanation", resourceCulture);
             }
         }
         
@@ -242,7 +253,7 @@ namespace SmartClicker.Resources.Localization {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Note.
+        ///   Ищет локализованную строку, похожую на Note📒.
         /// </summary>
         internal static string Note {
             get {

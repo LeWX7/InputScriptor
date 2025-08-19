@@ -129,8 +129,10 @@
 
         <!-- Нижняя панель с кнопками управления -->
         <StackLayout Grid.Row="2" Orientation="Vertical" Padding="10" Spacing="10">
-            <Label HorizontalOptions="End" BackgroundColor="#2C2C2C" FontSize="Micro" TextColor="White" 
-                Text= "{x:Static res:Strings.AddCurrentPositionHint}" />
+            <!--<Label HorizontalOptions="End" BackgroundColor="#2C2C2C" FontSize="Micro" TextColor="White" 
+                Text= "{x:Static res:Strings.AddCurrentPositionHint}" />-->
+            <Button HorizontalOptions="End" FontSize="Micro"
+                Text="ℹ️" Command="{Binding CommonExplanationCommand}"/>
 
             <HorizontalStackLayout Spacing="5" HorizontalOptions="End">
 

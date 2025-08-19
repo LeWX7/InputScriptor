@@ -33,6 +33,20 @@ namespace SmartClicker.Views
             });
         }
 
+        public static void ShowExplanation(string message)
+        {
+            MainThread.BeginInvokeOnMainThread(async () =>
+            {
+                if (Application.Current?.MainPage == null) return;
+
+                await Application.Current.MainPage.DisplayAlert(
+                    Strings.Explanation,
+                    message,
+                    "OK"
+                );
+            });
+        }
+
         public static void RestartApp()
         {
             var exePath = Environment.ProcessPath; // путь к исполняемому файлу

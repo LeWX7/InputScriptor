@@ -171,7 +171,7 @@
     <value>Кол-во нажатий</value>
   </data>
   <data name="Note" xml:space="preserve">
-    <value>Заметка</value>
+    <value>Заметка📒</value>
   </data>
   <data name="BlockCount" xml:space="preserve">
     <value>Кол-во блоков</value>
@@ -200,9 +200,6 @@
   <data name="Hours" xml:space="preserve">
     <value>Часы</value>
   </data>
-  <data name="AddCurrentPositionHint" xml:space="preserve">
-    <value>Добавить текущую позицию (Ctrl+X)  |  Дробная задержка указывается через “,”</value>
-  </data>
   <data name="SavePreset" xml:space="preserve">
     <value>Сохранить пресет 💾</value>
   </data>
@@ -230,5 +227,13 @@
   </data>
   <data name="Clamp" xml:space="preserve">
     <value>🖱️Зажать</value>
+  </data>
+  <data name="Explanation" xml:space="preserve">
+    <value>Объяснение🧑‍🏫</value>
+  </data>
+  <data name="CommonExplanation" xml:space="preserve">
+    <value>⌨️Добавить точку действия с текущей позицией курсора (Ctrl+X)
+⏱️Дробная задержка задается с помощью “,” (запятая)
+(1,5 минуты = 1 минута 30 секунд)</value>
   </data>
 </root>

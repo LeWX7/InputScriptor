@@ -6,8 +6,8 @@ namespace SmartClicker.Models
 {
     public class ClickBlock : INotifyPropertyChanged
     {
-        private string _mouseButton = Strings.L_MB;
-        private string _clickType = Strings.Click;
+        private string _mouseButton;
+        private string _clickType;
         private int _targetX;
         private int _targetY;
         private int _clickInterval;
@@ -39,6 +39,18 @@ namespace SmartClicker.Models
         {
             get => _clickType;
             set { _clickType = value; OnPropertyChanged(); }
+        }
+
+        async void StandartValuesForPickers()
+        {
+            await Task.Delay(500);
+            MouseButton = Strings.L_MB;
+            ClickType = Strings.Click;
+        }
+
+        public ClickBlock()
+        {
+            StandartValuesForPickers();
         }
 
         public int TargetX

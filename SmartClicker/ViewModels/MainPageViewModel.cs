@@ -62,6 +62,7 @@ namespace SmartClicker.ViewModels
         public ICommand SavePresetCommand { get; }
         public ICommand LoadPresetCommand { get; }
         public ICommand ChangeLanguageCommand { get; }
+        public ICommand CommonExplanationCommand { get; }
 
         public bool IsPaused
         {
@@ -100,6 +101,7 @@ namespace SmartClicker.ViewModels
             SavePresetCommand = new Command(async () => await OnSavePresetClicked(null, null));
             LoadPresetCommand = new Command(async () => await OnLoadPresetClicked(null, null));
             ChangeLanguageCommand = new Command(CangeLanguage);
+            CommonExplanationCommand = new Command(DisplayCommonExplanation);
 
             LoadPresetList();
 
@@ -397,6 +399,11 @@ namespace SmartClicker.ViewModels
         private void CangeLanguage()
         {
             MainPage.ShowWarning(Strings.ChangeLanguageWarning);
+        }
+
+        private void DisplayCommonExplanation()
+        {
+            MainPage.ShowExplanation(Strings.CommonExplanation);
         }
     }
 }

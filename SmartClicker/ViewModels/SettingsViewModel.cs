@@ -45,7 +45,7 @@ namespace SmartClicker.ViewModels
             Strings.Minutes,
             Strings.Hours
         };
-        private string _selectedUnit = Strings.Seconds;
+        private string _selectedUnit;
         public string SelectedUnit
         {
             get => _selectedUnit;
@@ -56,6 +56,14 @@ namespace SmartClicker.ViewModels
         {
             var saved = Preferences.Get("AppLanguage", "en");
             SelectedLanguage = Languages.FirstOrDefault(l => l.Code == saved);
+
+            StandartValuesForPickers();
+        }
+
+        async void StandartValuesForPickers()
+        {
+            await Task.Delay(500);
+            SelectedUnit = Strings.Seconds;
         }
 
         private bool _onCoordinates;

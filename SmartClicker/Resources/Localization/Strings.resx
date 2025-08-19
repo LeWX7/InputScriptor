@@ -171,7 +171,7 @@ delay spread</value>
     <value>Number of clicks</value>
   </data>
   <data name="Note" xml:space="preserve">
-    <value>Note</value>
+    <value>Note📒</value>
   </data>
   <data name="BlockCount" xml:space="preserve">
     <value>Number of blocks</value>
@@ -200,9 +200,6 @@ delay spread</value>
   <data name="Hours" xml:space="preserve">
     <value>Hours</value>
   </data>
-  <data name="AddCurrentPositionHint" xml:space="preserve">
-    <value>Add current position (Ctrl+X)  |  Fractional delay is specified with “,”</value>
-  </data>
   <data name="SavePreset" xml:space="preserve">
     <value>Save preset 💾</value>
   </data>
@@ -230,5 +227,13 @@ delay spread</value>
   </data>
   <data name="Clamp" xml:space="preserve">
     <value>🖱️Hold</value>
+  </data>
+  <data name="Explanation" xml:space="preserve">
+    <value>Explanation🧑‍🏫</value>
+  </data>
+  <data name="CommonExplanation" xml:space="preserve">
+    <value>⌨️Add an action point with the current cursor position (Ctrl+X)
+⏱️Fractional delay is set using ",“ (comma)
+(1.5 minutes = 1 minute and 30 seconds)</value>
   </data>
 </root>
