@@ -39,7 +39,7 @@ It allows you to define, save, and replay input scenarios, eliminating repetitiv
 ---
 
 ## 📥 Installation
-1. Go to the [Installation](https://github.com/LeWX7/InputScriptor/Installation) section.  
+1. Go to the [Installation](Installation) section.  
 2. Download the latest version of the archive.  
 3. Follow the instructions included in the package.  
 
