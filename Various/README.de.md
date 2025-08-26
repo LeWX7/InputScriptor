@@ -1,6 +1,6 @@
 # Input Scriptor
 
-[English version](README.md)	[Русская версия](Various/README.ru.md)
+[English version](InputScriptor/README.md) 🌍 [Русская версия](README.ru.md)
 
 ## 🚀 Was ist Input Scriptor?
 **Input Scriptor** ist eine Anwendung zur Automatisierung von Mausaktionen und (zukünftig) Tastatureingaben.  
