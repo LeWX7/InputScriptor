@@ -39,7 +39,7 @@ Sie ermöglicht das Erstellen, Speichern und Abspielen von Szenarien, um sich vo
 ---
 
 ## 📥 Installation
-1. Gehe zum Abschnitt [Installation](https://github.com/LeWX7/InputScriptor/Installation).  
+1. Gehe zum Abschnitt [Installation](../Installation).  
 2. Lade die neueste Version des Archivs herunter.  
 3. Folge den Anweisungen im Archiv.  
 
