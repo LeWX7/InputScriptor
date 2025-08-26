@@ -1,0 +1,52 @@
+SmartClicker/
+├── Controls/
+│   ├── HeaderLabel.xaml
+│   ├── HeaderLabel.xaml.cs
+│   ├── MediumLabel.xaml
+│   ├── MediumLabel.xaml.cs
+│   ├── CustomEntry.xaml
+│   ├── CustomEntry.xaml.cs
+│   ├── CustomButton.xaml
+│   ├── CustomButton.xaml.cs
+│   ├── CustomSwitchV2.xaml
+│   └── CustomSwitchV2.xaml.cs
+│
+├── Converters/
+│   └── IntToStringConverter.cs
+│
+├── Models/
+│   ├── ClickBlock.cs
+│   ├── Items.cs
+│   └── PresetData.cs
+│
+├── ViewModels/
+│   ├── MainPageViewModel.cs
+│   ├── SettingsViewModel.cs
+│   ├── InputViewModel.cs
+│   ├── DynamicViewModel.cs
+│   └── ClickBlockViewModel.cs
+│
+├── Views/
+│   ├── MainPage.xaml
+│   └── MainPage.xaml.cs
+│
+├── Services/
+│   ├── MouseService.cs
+│   ├── KeyboardHookService.cs
+│   └── PresetService.cs
+│
+├── Helpers/
+│   └── GlobalKeyboardHook.cs
+│
+├── Resources/
+│   └── Localization/
+│       ├── Strings.resx
+│       ├── Strings.ru.resx
+│       ├── Strings.de.resx
+│       └── Strings.Designer.cs
+│
+├── App.xaml
+├── App.xaml.cs
+├── AppShell.xaml
+├── AppShell.xaml.cs
+└── MauiProgram.cs

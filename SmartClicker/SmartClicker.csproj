@@ -25,12 +25,12 @@
 		<GenerateAppInstallerFile>True</GenerateAppInstallerFile>
 		<AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
 		<AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
-		<AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
+		<AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
 		<AppxSymbolPackageEnabled>False</AppxSymbolPackageEnabled>
 		<GenerateTestArtifacts>True</GenerateTestArtifacts>
 		<AppInstallerUri>C:\Users\Oleks\Desktop\Programms\Programs\C# MAUI\SmartClicker\Release</AppInstallerUri>
-		<HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
-		<PackageCertificateThumbprint>974012454E7637D07BD69AA4A1D09F369068E2E2</PackageCertificateThumbprint>
+		<HoursBetweenUpdateChecks>168</HoursBetweenUpdateChecks>
+		<PackageCertificateThumbprint>DBC0F1563CD6D2FE65CD15E5032E35FA6233D58A</PackageCertificateThumbprint>
 		<DefaultLanguage>ru-ru</DefaultLanguage>
 		<PlatformTarget>AnyCPU</PlatformTarget>
 		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>

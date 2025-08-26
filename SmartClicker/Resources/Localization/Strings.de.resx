@@ -233,7 +233,11 @@ Verzögerungsspanne</value>
   </data>
   <data name="CommonExplanation" xml:space="preserve">
     <value>⌨️Aktionspunkt mit der aktuellen Cursorposition hinzufügen (Strg+X)
-⏱️Die Bruchverzögerung wird mit "," (Komma) angegeben
-(1,5 minuten = 1 Minute 30 Sekunden)</value>
+
+⏱️Die Bruchverzögerung wird mit  "," (Komma) angegeben
+ (1,5 minuten = 1 Minute 30  Sekunden)
+
+💾Presets werden lokal in Dokumenten gespeichert
+im Ordner "Presets_for_SmartClicker"</value>
   </data>
 </root>

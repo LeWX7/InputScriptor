@@ -25,7 +25,7 @@
         </Grid.ColumnDefinitions>
 
         <!-- Верхняя панель с информацией -->
-        <StackLayout Grid.Row="0" Orientation="Horizontal" Padding="16,0,0,48">
+        <StackLayout Grid.Row="0" Orientation="Horizontal" Padding="23,0,0,48">
             <controls:HeaderLabel Text="{Binding DynamicData.CurrentX}" />
             <controls:HeaderLabel Text="{Binding DynamicData.CurrentY}" Margin="10,0,0,0" />
             <controls:MediumLabel Text="{Binding DynamicData.StepScoreLabel}" Margin="25,0,0,0" />

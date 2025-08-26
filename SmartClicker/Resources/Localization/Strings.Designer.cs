@@ -126,8 +126,12 @@ namespace SmartClicker.Resources.Localization {
         
         /// <summary>
         ///   Ищет локализованную строку, похожую на ⌨️Add an action point with the current cursor position (Ctrl+X)
+        ///
         ///⏱️Fractional delay is set using &quot;,“ (comma)
-        ///(1.5 minutes = 1 minute and 30 seconds).
+        ///(1.5 minutes = 1 minute and 30 seconds)
+        ///
+        ///💾Presets are saved locally in documents
+        ///in the &quot;Presets_for_SmartClicker&quot; folder.
         /// </summary>
         internal static string CommonExplanation {
             get {

@@ -61,3 +61,45 @@
 #*.PDF   diff=astextplain
 #*.rtf   diff=astextplain
 #*.RTF   diff=astextplain
+
+# ---------------------------------
+# Локализация языка проекта
+# ---------------------------------
+*.cs linguist-detectable=true
+*.xaml linguist-detectable=true
+*.xaml linguist-generated=false
+
+# ---------------------------------
+# Игнорируем сборочные артефакты
+# ---------------------------------
+bin/* linguist-vendored
+obj/* linguist-vendored
+
+# ---------------------------------
+# Игнорируем конфигурационные файлы и временные данные
+# ---------------------------------
+*.user linguist-vendored
+*.suo linguist-vendored
+*.tmp linguist-vendored
+
+# ---------------------------------
+# Игнорируем пакеты
+# ---------------------------------
+packages/* linguist-vendored
+
+# ---------------------------------
+# Учитываем ресурсы (шрифты, картинки) как ресурсы
+# ---------------------------------
+*.png linguist-vendored
+*.jpg linguist-vendored
+*.jpeg linguist-vendored
+*.ico linguist-vendored
+*.ttf linguist-vendored
+*.otf linguist-vendored
+
+# ---------------------------------
+# Игнорируем auto-generated файлы (например designer)
+# ---------------------------------
+*Designer.cs linguist-generated=true
+*.g.cs linguist-generated=true
+*.g.i.cs linguist-generated=true

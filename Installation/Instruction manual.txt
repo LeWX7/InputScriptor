@@ -1,0 +1,41 @@
+Opening the certificate
+Click the Install Certificate button
+
+--Storage location----
+| ⚪Current user     |
+| 🔵Local computer   |
+----------------------
+( You need to select the "Local computer")
+
+Next, select "Put all certificates in the following storage"
+Click the "Browse" button and select "Trusted Root Certification Authorities"
+
+Ready!
+______________________________________________________________________________
+Открываем сертификат
+Нажимаем кнопку "Установить сертификат"
+
+--Расположение хранилища-----
+| ⚪Текущий пользователь    |
+| 🔵Локальный компьютер     |
+-----------------------------
+(Нужно выбрать именно "Локальный компьютер")
+
+Далее выбираем "Поместить все сертификаты в следующее хранилище"
+Нажимаем кнопку "Обзор" и выбираем «Доверенные корневые центры сертификации»
+
+Готово!
+______________________________________________________________________________
+Öffnen Sie das Zertifikat
+Klicken Sie auf "Zertifikat installieren"
+
+--Speicherort des Speichers----
+| ⚪Aktueller Benutzer        |
+| 🔵Lokaler Computer          |
+-------------------------------
+(Sie müssen "Lokaler Computer" auswählen)
+
+Als nächstes wählen Sie "Alle Zertifikate im folgenden Speicher ablegen"
+Klicken Sie auf die Schaltfläche "Durchsuchen" und wählen Sie "Vertrauenswürdige Stammzertifizierungsstellen» aus
+
+Fertig!

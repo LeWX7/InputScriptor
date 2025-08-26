@@ -233,7 +233,11 @@ delay spread</value>
   </data>
   <data name="CommonExplanation" xml:space="preserve">
     <value>⌨️Add an action point with the current cursor position (Ctrl+X)
+
 ⏱️Fractional delay is set using ",“ (comma)
-(1.5 minutes = 1 minute and 30 seconds)</value>
+(1.5 minutes = 1 minute and 30 seconds)
+
+💾Presets are saved locally in documents
+in the "Presets_for_SmartClicker" folder</value>
   </data>
 </root>
