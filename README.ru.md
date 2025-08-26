@@ -1,6 +1,6 @@
 # Input Scriptor
 
-[English version](README.en.md)
+[English version](README.md)
 
 ## 🚀 Что такое Input Scriptor?
 **Input Scriptor** – это приложение для автоматизации действий мыши и (в будущем) клавиатуры.  
